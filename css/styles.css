@@ -139,12 +139,13 @@ header {
 .contact-icon {
   margin-right: 10px;
   fill: currentColor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-icon:hover,
 .contact-icon:focus {
   fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 /* Герой */
@@ -212,6 +213,8 @@ header {
   text-decoration: none;
   border-radius: 4px;
   padding: 6px 22px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-secondary:hover,
 .button-secondary:focus {
@@ -219,8 +222,7 @@ header {
   color: var(--primary-wite-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 /* Модальное окно */
 
@@ -257,11 +259,8 @@ header {
   padding-right: 40px;
 
   background-color: var(--primary-wite-color);
-
   transform: translate(-50%, -50%) scale(1);
-
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 
 }
 .close-button{
@@ -283,14 +282,18 @@ header {
 }
 .close-icon{
   display: flex;
-
   margin: 0;
   padding: 0;
+  fill: var(--primary-text-color);  
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-button:hover{
-  background-color: red;
-  fill: var(--primary-wite-color);
-  }
+
+.close-button:hover .close-icon,
+.close-button:focus .close-icon{ 
+
+  fill: var(--accent-color);
+}
 
 
 /* Особенности */
@@ -480,9 +483,13 @@ header {
   cursor: pointer;
   color: var(--primary-wite-color);
   fill: var(--primary-wite-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link .our-team-icon {
   fill: var(--icon-primary-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -493,8 +500,7 @@ header {
 .social-link:hover .our-team-icon,
 .social-link:focus .our-team-icon {
   fill: currentColor;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 /* Постоянные клиенты  */
@@ -530,6 +536,8 @@ header {
   border: 1px solid var(--icon-primary-color);
   border-radius: 4px;
   padding: 16px 32px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-box:hover .icon,
 .clients-box:focus .icon {
@@ -542,11 +550,12 @@ header {
 .clients-box:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .icon {
   fill: var(--icon-primary-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Портфолио */
 .portfolio {
@@ -580,8 +589,7 @@ header {
  .portfolio-item:focus  {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 .portfolio-items {
@@ -613,6 +621,8 @@ header {
 .portfolio-item{
   display: flex;
   flex-wrap: wrap;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-wrap{
@@ -700,10 +710,69 @@ address .list + .list {
   cursor: pointer;
   color: var(--primary-wite-color);
   fill: var(--primary-wite-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.footer-subscription-section{
+  margin-left: auto;
+
+  /* padding: 20px; */
+  
+}
+.footer-subscription-form {
+  display: flex;
+  flex-direction: row ;
+}
+.footer-subscription-field{
+
+  display: flex;
+  flex-direction: column;
+  min-width: 358px;
+  padding-top: 12px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-wite-color);
+}
+.footer-subscription-field label{
+  margin-bottom: 20px;
+}
+.footer-subscription-name{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-wite-color);
+
+}
+.footer-subscription-field input{
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  width: auto;
+  height: 50px;
+}
+
+.subscription-button{
+  display: flex;
+  align-self: flex-end;
+  height: 50px;
+  min-width: 200px;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center; 
+}
+.subscription-button .connect-icon{
+  margin-left: 10px;
 }
