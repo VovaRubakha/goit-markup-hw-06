@@ -917,8 +917,7 @@ address .list + .list {
   fill: var(--primary-wite-color);
 }
 .licence-agreement{
-  display: block;
-  justify-content: end;
+
   color: var(--accent-color);
   text-decoration: underline;
   
